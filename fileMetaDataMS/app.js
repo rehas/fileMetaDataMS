@@ -1,4 +1,4 @@
-﻿var port = process.env.port;
+﻿var port = process.env.port || 1337;
 var express = require('express');
 console.log(port);
 
