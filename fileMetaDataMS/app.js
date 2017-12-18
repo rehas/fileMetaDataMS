@@ -4,8 +4,8 @@ console.log(port);
 
 var app = express();
 
-app.use('/', function (req, res) {
-    res.send(req.headers);
+app.get('/', function (req, res) {
+    res.send("<h1>Hello World</h1>");
 })
 
 app.get('/favicon.ico', function (req, res) {
