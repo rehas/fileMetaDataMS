@@ -9,11 +9,11 @@ app.use('/', function (req, res) {
 })
 
 app.get('/favicon.ico', function (req, res) {
-    res.end("Hello World");
+    res.end("<h1>Hello World</h1>");
 })
 
 app.get('/robots.txt', function (req, res) {
-    res.end("Hello World");
+    res.end("<h1>Hello World</h1>");
 })
 
 app.listen(port, function() {
