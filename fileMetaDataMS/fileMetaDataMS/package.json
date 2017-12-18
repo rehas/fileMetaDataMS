@@ -1,0 +1,10 @@
+{
+  "name": "file-meta-data-ms",
+  "version": "0.0.0",
+  "description": "fileMetaDataMS",
+  "main": "app.js",
+  "author": {
+    "name": "Rehas",
+    "email": ""
+  }
+}
