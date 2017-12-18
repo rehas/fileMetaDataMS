@@ -1,11 +1,11 @@
-﻿var port = process.env.port || 1337;
-var express = require('express');
+﻿var express = require('express');
+var port = process.env.PORT || 1350;
 console.log(port);
 
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send("<h1>Hello World</h1>");
+    res.end("<h1>Hello World</h1>");
 })
 
 app.get('/favicon.ico', function (req, res) {
@@ -17,6 +17,6 @@ app.get('/robots.txt', function (req, res) {
 })
 
 app.listen(port, function() {
-console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 
 });
