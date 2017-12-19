@@ -1,13 +1,17 @@
 ﻿var express = require('express');
 var multer = require('multer');
+var path = require('path');
 var port = process.env.PORT || 1350;
 console.log(port);
 
+
 var app = express();
 
-app.get('/', function (req, res) {
-    res.end("<h1>Hello World</h1>");
-})
+app.use('/', express.static(__dirname + '/public'));
+
+//app.get('/', function (req, res) {
+//    res.sendFile(__dirname + '/public/index.html');
+//})
 
 app.get('/favicon.ico', function (req, res) {
     res.end("<h1>Hello World</h1>");
