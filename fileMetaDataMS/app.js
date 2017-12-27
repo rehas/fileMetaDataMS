@@ -44,13 +44,12 @@ app.post('/api/file/', function (req, res) {
         console.log("File is " + JSON.stringify(req.file));
         console.log("File size is  " + req.file.size);
         response["size"] = req.file.size;
-
+        
         console.log("Response is " + JSON.stringify(response));
+        res.redirect('/result');
     })
     
-    console.log("Response is " + JSON.stringify(response));
 
-    res.redirect('/result');
     //console.log("Multer File is  " + multerFile);
 });
 
