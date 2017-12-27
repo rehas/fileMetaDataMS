@@ -8,7 +8,7 @@ console.log(port);
 
 var app = express();
 
-app.use(express.static('uploads'));
+app.use(express.static(__dirname + '/uploads'));
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
