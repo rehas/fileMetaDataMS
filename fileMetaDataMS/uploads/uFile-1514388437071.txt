@@ -1,0 +1,30 @@
+-Index page'e instructions koy, +
+  -api/search/fdjskafdsa vs gibi
+  
+-api/is/ pathini yakala +
+  -Buradan gelen parametreyi al, console a bas + 
+  -Buradan gelen extra parametreleri ?'dan sonrasini al, console'a bas. +
+  -Buradan gelen parametreyi ve extra'lari google a ver, sonuclari al, console 'a bas
+    +Burada yine async patliyor sanirim, bunu ayri fonksiyona cek, async ile sirala.+ bu yapildi
+    +Su An Buradasin - 13.12 - > 
+      -Promise {'[{}, {}]'} gibi bir objemsi donuyor geriye parse etmen lazim bunu
+      -bir kisi npm request ile cozmus link bu : https://github.com/AsimoLoveGym/Image-Search-Abstraction-Layer/blob/master/app.js
+      -bir kisi daha request ile cozmus link : https://github.com/obinnaeye/image-search-api/blob/master/server.js
+      -Usttekilere gerek kalmadi, promise seysi gezilebiliyormus. Array gibi. 
+   -Simdi gelen sonuclari bir objeye doldur, onu ekrena bas. + yapildi
+    -Objede istenen ozellikler asagida.
+   -Page kismini da query'den al + alindi
+   -Query'deki bosluklari manage et. + edildi
+    
+  -Buradan gelen parametreyi DB'ye kaydet, timestamp ve ID ile. 
+  
+-api/latest/is pathini yakala + 
+    -Burada son yapilmis aramalari goster + 
+    
+-Google sonuclarini parse et su sekilde: 
+{
+  url : "",
+  snippet : "", (description)
+  thumbnail : "",
+  context : "", (parent page)
+}
