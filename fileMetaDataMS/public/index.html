@@ -4,6 +4,21 @@
     <title></title>
     <script src="angular.js"></script>
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var ul = function () {
+        var photo = document.getElementById("uFile");
+        var file = photo.files[0];
+
+        console.log("File name: " + file.fileName);
+        console.log("File size: " + file.fileSize);
+        //console.log("Binary content: " + file.getAsBinary());
+        //console.log("Text content: " + file.getAsText(""));
+
+        return false;
+    };
+    </script>
+
 </head>
 <body ng-controller="myController">
 
@@ -12,6 +27,21 @@
     <p> {{3+5}}</p>
 
     {{testVar}}
+    <br />  
+    <!--<div ng-form="myForm" >
+        <input id="fileUpload" type="file" name="fileUpload" ng-Change="" ng-model="uFile" />
+        <button type="submit" ng-click="uploadFile()"> Submit</button>
+    </div>-->
+
+    <form enctype="multipart/form-data" action="/api/file" method="post" >
+        <input id="uFile" type="file" name="uFile" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <!--<form id="uploadForm" enctype="multipart/form-data" method="post">
+        <input type="file" name="userFile" />
+        <input type="submit" value="Upload File" name="submit">
+    </form>-->
 
 </body>
 </html>
