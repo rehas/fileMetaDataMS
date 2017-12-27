@@ -1,0 +1,19 @@
++Computer shows random order of buttons
+  -Display
+  -Sound
+  -Increasing step size upto 20 on each turn, when user successful
+
++User inputs order
+  -On each input, computer checks if true, 
+    -if true, accept and continue, 
+    -if false, 
+      -reset user input to step 0
+      -play sound of error
+
+
+----------------------------------------
+
+-Show buttons, with color + done
+-Capture clicks on buttons, +done, got id from click.
+-Light on or off buttons, based on random value
+-Play sounds on each light on
