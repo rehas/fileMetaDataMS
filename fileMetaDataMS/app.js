@@ -40,11 +40,15 @@ app.post('/api/file/', function (req, res) {
     }).single('uFile');
     upload(req, res, function (err) {
         //res.end('File is uploaded');
-        console.log(req.body);
-        console.log("File is " + JSON.stringify(req.file));
-        console.log("File size is  " + req.file.size);
-        response["size"] = req.file.size;
         
+        if (req.file !== undefined) {
+            console.log(req.body);
+            console.log("File is " + JSON.stringify(req.file));
+            console.log("File size is  " + req.file.size);
+            response["size"] = req.file.size;
+        } else {
+            console.log("File is currently undefined");
+        }
         console.log("Response is " + JSON.stringify(response));
         res.redirect('/result');
     })
